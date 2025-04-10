@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML 테스트 페이지</title>
+    <style>
+        body {
+            font-family: 'Nanum Gothic', Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+        header {
+            background-color: #4a76a8;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        nav {
+            background-color: #333;
+            overflow: hidden;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        nav a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .section {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #4a76a8;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .form-control {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 15px;
+            background-color: #4a76a8;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #3a5a78;
+        }
+        .flex-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .flex-item {
+            flex: 0 0 48%;
+            background-color: #e9ecef;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+        }
+        @media (max-width: 768px) {
+            .flex-item {
+                flex: 0 0 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>HTML 테스트 페이지</h1>
+            <p>다양한 HTML 요소와 CSS 스타일을 테스트해볼 수 있는 페이지입니다.</p>
+        </header>
+
+        <nav>
+            <a href="#home">홈</a>
+            <a href="#section1">섹션 1</a>
+            <a href="#section2">섹션 2</a>
+            <a href="#section3">섹션 3</a>
+            <a href="#forms">폼 예제</a>
+        </nav>
+
+        <div class="section" id="home">
+            <h2>HTML 소개</h2>
+            <p>HTML(Hypertext Markup Language)은 웹 페이지의 구조를 정의하는 마크업 언어입니다.</p>
+            <p>이 페이지에서는 다양한 HTML 요소와 그 사용법을 살펴볼 수 있습니다.</p>
+        </div>
+
+        <div class="section" id="section1">
+            <h2>텍스트 요소</h2>
+            <h3>제목 태그</h3>
+            <h1>H1 제목</h1>
+            <h2>H2 제목</h2>
+            <h3>H3 제목</h3>
+            <h4>H4 제목</h4>
+            <h5>H5 제목</h5>
+            <h6>H6 제목</h6>
+
+            <h3>단락과 텍스트 서식</h3>
+            <p>이것은 일반 단락입니다.</p>
+            <p>텍스트에 <strong>강조</strong>를 주거나 <em>이탤릭체</em>로 표시할 수 있습니다.</p>
+            <p><mark>하이라이트</mark>나 <del>취소선</del>, <ins>밑줄</ins>도 적용 가능합니다.</p>
+            <p>위첨자<sup>2</sup>와 아래첨자<sub>n</sub>도 사용할 수 있습니다.</p>
+
+            <h3>인용문</h3>
+            <blockquote>
+                <p>이것은 블록 인용문입니다. 다른 출처에서 인용한 내용을 표시할 때 사용합니다.</p>
+                <footer>- 인용 출처</footer>
+            </blockquote>
+            <p>인라인 인용문은 <q>이렇게 표시</q>합니다.</p>
+        </div>
+
+        <div class="section" id="section2">
+            <h2>목록 요소</h2>
+            
+            <h3>순서 없는 목록</h3>
+            <ul>
+                <li>항목 1</li>
+                <li>항목 2</li>
+                <li>항목 3
+                    <ul>
+                        <li>중첩 항목 3.1</li>
+                        <li>중첩 항목 3.2</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h3>순서 있는 목록</h3>
+            <ol>
+                <li>첫 번째 항목</li>
+                <li>두 번째 항목</li>
+                <li>세 번째 항목
+                    <ol type="a">
+                        <li>하위 항목 a</li>
+                        <li>하위 항목 b</li>
+                    </ol>
+                </li>
+            </ol>
+
+            <h3>정의 목록</h3>
+            <dl>
+                <dt>HTML</dt>
+                <dd>웹 페이지의 구조를 정의하는 마크업 언어</dd>
+                <dt>CSS</dt>
+                <dd>웹 페이지의 스타일을 정의하는 스타일시트 언어</dd>
+                <dt>JavaScript</dt>
+                <dd>웹 페이지의 동작을 제어하는 프로그래밍 언어</dd>
+            </dl>
+        </div>
+
+        <div class="section" id="section3">
+            <h2>테이블 요소</h2>
+            <table>
+                <caption>웹 개발 언어와 역할</caption>
+                <thead>
+                    <tr>
+                        <th>언어</th>
+                        <th>역할</th>
+                        <th>난이도</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>HTML</td>
+                        <td>구조</td>
+                        <td>쉬움</td>
+                    </tr>
+                    <tr>
+                        <td>CSS</td>
+                        <td>스타일</td>
+                        <td>보통</td>
+                    </tr>
+                    <tr>
+                        <td>JavaScript</td>
+                        <td>동작</td>
+                        <td>어려움</td>
+                    </tr>
+                    <tr>
+                        <td>Python</td>
+                        <td>백엔드</td>
+                        <td>보통</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="3">모든 언어는 연습이 필요합니다.</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+
+        <div class="section" id="forms">
+            <h2>폼 요소</h2>
+            <form action="#" method="post">
+                <div class="form-group">
+                    <label for="name">이름:</label>
+                    <input type="text" id="name" name="name" class="form-control" placeholder="이름을 입력하세요">
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">이메일:</label>
+                    <input type="email" id="email" name="email" class="form-control" placeholder="이메일을 입력하세요">
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">비밀번호:</label>
+                    <input type="password" id="password" name="password" class="form-control">
+                </div>
+                
+                <div class="form-group">
+                    <label>성별:</label>
+                    <div>
+                        <label><input type="radio" name="gender" value="male"> 남성</label>
+                        <label><input type="radio" name="gender" value="female"> 여성</label>
+                        <label><input type="radio" name="gender" value="other"> 기타</label>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label>관심 분야:</label>
+                    <div>
+                        <label><input type="checkbox" name="interests" value="html"> HTML</label>
+                        <label><input type="checkbox" name="interests" value="css"> CSS</label>
+                        <label><input type="checkbox" name="interests" value="js"> JavaScript</label>
+                        <label><input type="checkbox" name="interests" value="python"> Python</label>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="country">국가:</label>
+                    <select id="country" name="country" class="form-control">
+                        <option value="">국가를 선택하세요</option>
+                        <option value="kr">대한민국</option>
+                        <option value="us">미국</option>
+                        <option value="jp">일본</option>
+                        <option value="cn">중국</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">메시지:</label>
+                    <textarea id="message" name="message" class="form-control" rows="5" placeholder="메시지를 입력하세요"></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <button type="submit" class="btn">제출</button>
+                    <button type="reset" class="btn">초기화</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="section">
+            <h2>Flexbox 레이아웃</h2>
+            <div class="flex-container">
+                <div class="flex-item">
+                    <h3>항목 1</h3>
+                    <p>Flexbox는 요소를 행과 열 형태로 배치하는 레이아웃 모델입니다.</p>
+                </div>
+                <div class="flex-item">
+                    <h3>항목 2</h3>
+                    <p>반응형 디자인에 매우 유용하며 요소 간의 간격과 정렬을 쉽게 제어할 수 있습니다.</p>
+                </div>
+                <div class="flex-item">
+                    <h3>항목 3</h3>
+                    <p>브라우저 창의 크기를 조절해보세요. 화면 크기에 따라 레이아웃이 변경됩니다.</p>
+                </div>
+                <div class="flex-item">
+                    <h3>항목 4</h3>
+                    <p>모바일 화면에서는 항목이 세로로 쌓이게 됩니다.</p>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2025 HTML 테스트 페이지 | 모든 권리 보유</p>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('페이지가 로드되었습니다.');
+            
+            // 내비게이션 링크에 클릭 이벤트 추가
+            const navLinks = document.querySelectorAll('nav a');
+            navLinks.forEach(function(link) {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 20,
+                        behavior: 'smooth'
+                    });
+                });
+            });
+            
+            // 폼 제출 이벤트 처리
+            const form = document.querySelector('form');
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                let isValid = true;
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                
+                if (!name) {
+                    alert('이름을 입력해주세요.');
+                    isValid = false;
+                }
+                
+                if (!email) {
+                    alert('이메일을 입력해주세요.');
+                    isValid = false;
+                }
+                
+                if (isValid) {
+                    alert('폼이 제출되었습니다!\n이름: ' + name + '\n이메일: ' + email);
+                    this.reset();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
